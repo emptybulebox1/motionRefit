@@ -10,7 +10,7 @@ This is the code repository of the CVPR25 paper **"Learning with Dynamic Motion 
 ## Getting Started  
 ### Prerequisites  
 To run the application, you need to have the following installed:  
-- Python 3.8  
+- Python 3.10
 - Required Python packages (specified in `requirements.txt`)
 
 
