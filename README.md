@@ -3,6 +3,7 @@
 ![Teaser](assets/teaser.jpeg)
 
 This is the code repository of **Dynamic Motion Blending for Versatile Motion Editing** at **CVPR 2025**.
+
 📝 [**arXiv**](https://arxiv.org) | 🌐 [**Project Page**](https://awfuact.github.io/motionrefit) | 🤗 [**Hugging Face Space**](https://huggingface.co/spaces/Yzy00518/motionReFit)  
 
 ## Getting Started  
