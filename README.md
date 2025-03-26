@@ -1,11 +1,9 @@
-# Learning with Dynamic Motion Blending for Versatile Motion Editing  
+# Dynamic Motion Blending for Versatile Motion Editing
 
-This is the code repository of the CVPR25 paper **"Learning with Dynamic Motion Blending for Versatile Motion Editing"**.  
+![Teaser](assets/teaser.jpeg)
 
-![Teaser](assets/teaser.jpeg)  
-
+This is the code repository of **Dynamic Motion Blending for Versatile Motion Editing** at **CVPR 2025**.
 📝 [**arXiv**](https://arxiv.org) | 🌐 [**Project Page**](https://awfuact.github.io/motionrefit) | 🤗 [**Hugging Face Space**](https://huggingface.co/spaces/Yzy00518/motionReFit)  
----  
 
 ## Getting Started  
 ### Prerequisites  
@@ -18,7 +16,7 @@ To run the application, you need to have the following installed:
 
 1. **Clone the Repository**:
     ```sh
-    git clone https://github.com/emptybulebox1/motionRefit.git
+    git clone https://github.com/emptybulebox1/motionReFit.git
     cd motionRefit
     ```
 
