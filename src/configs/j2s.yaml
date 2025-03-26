@@ -1,0 +1,3 @@
+JointsToSMPLX_model_path: 'deps/Checkpoints/model_joints_to_smpl_wrist.pth'
+smplx_path: 'deps/smplx/models'
+interp_s: 2

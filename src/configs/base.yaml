@@ -1,0 +1,47 @@
+# configs for all tasks
+seq_len: 16
+joints_num: 28
+channels: 84
+
+fix_mode: true
+fixed_frame: 2
+need_text_emb: true
+use_cfg: true
+
+diffusion:
+  fix_mode: ${fix_mode}
+  text_emb: ${need_text_emb}
+  fixed_frames: ${fixed_frame}
+  seq_len: ${seq_len}
+  timesteps: 100
+  beta_schedule: "linear"
+
+train:
+  batchsize: 256
+  model_path: "../models" # all models trained are saved in this folder
+  total_epochs: 4000
+  # log_file: "ablation_64_frames.log"
+  learning_rate: 1e-4
+
+unet:
+  dim_model: 512
+  num_heads: 16
+  num_layers: 8
+  dropout_p: 0.1
+  dim_input: ${channels}
+  dim_output: ${channels}
+  text_emb: ${need_text_emb}
+
+dataset:
+  cfg_p: 0.10
+  seq_len: ${seq_len}
+  use_cfg: ${use_cfg}
+  scale: 2 # 20fps-> 10fps
+
+
+# we only predict joints' positions, rather than full body mesh!
+smplx:
+  model_path: "../smplx/models/" # smplx weights
+  model_type: "smplx_joint_only"
+  gender: "male"
+  ext: "npz"

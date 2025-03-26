@@ -1,0 +1,23 @@
+# for regen
+# also you can overwrite the base config here
+task: 'adjustment'
+model_path: 'models'
+disc_model_path: 'models/disc'
+model_used: 3300 # which model to use
+disc_model_used: 68000
+
+# data_path
+test_data_path: 'data/test_data/adjustment'
+text_path: 'text.txt'
+mask_path: 'mask.txt'
+joints_src_path: 'source.npy'
+gen_file_names_path: 'gen_file_name.txt'
+
+
+cfg_alpha: 3.0
+batch_size: 1
+
+cg_alpha: 1.0
+cg_diffusion_steps: 5
+
+save_path: 'results/adjustment'
