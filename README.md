@@ -56,7 +56,7 @@ STANCE (Style Transfer, Fine-Grained Adjustment, and Body Part Replacement) is a
 ---
 
 ## Download
-[**Google Drive**]()
+[**Google Drive**](https://drive.google.com/file/d/1LiNgkRZ-Kmv5rKI3BOaHVCudhrMtE5hx/view?usp=sharing)
 
 ## Tasks
 
@@ -74,17 +74,30 @@ This task involves subtle modifications of motion characteristics such as amplit
 ```plaintext
 dataset
     - base_motion
-        - humanml3d_pkl_all: SMPLX format files of 24,000 motions from HumanML3D
-        - test.txt: Official test set of HumanML3D (https://github.com/EricGuo5513/HumanML3D/blob/main/HumanML3D/test.txt)
+        SMPLX format motion data from HumanML3D (24746 in total)
+
     - regen (pkl data is in base_motion)
-        - mask_all.json: Annotated body parts. The key of the dictionary is the HumanML3D ID, and the value is the annotated body part.
+        - mask_all.json: Annotated body parts, where each key is a HumanML3D ID.
         - part_annotations.json
+
     - style_transfer
-        - humanml3d_stylized: Stylized motions, with IDs corresponding to those in base_motion
+        Stylized motions, with IDs corresponding to those in base_motion (749 in total)
+
     - adjustment
-        - paired_pickle
-        - adjustment_annotations_part.json
-        - transfer.py: Conversion between paired_pickle and annotations
+        Paired motion data used for fine-grained adjustment. (4411 in total)
+
+    - split
+        - base_motion
+            Official test & val splits from HumanML3D (https://github.com/EricGuo5513/HumanML3D/blob/main/HumanML3D)
+        
+        - style_transfer
+            Test/Val pairs used in MotionReFit.
+            Note: during training, only the blended motions (generated as BLD(*base_motion, style_transfer_motion)) are available.
+            
+        - adjustment
+            Test/Val pairs used in MotionReFit.
+            Note: during training, only the blended motions (generated as BLD(*base_motion, adjustment_motion)) are available.
+            
     - README.md
 ```
 
@@ -105,5 +118,7 @@ All SMPLX format data is sampled at 20 fps.
     {
         'src': SMPLX format data,
         'tgt': SMPLX format data,
+        'text': edit instruction,
+        'body_part': body part to edit,
     }
 ```
