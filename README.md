@@ -49,7 +49,7 @@ To run the application, you need to have the following installed:
 
 # STANCE Dataset
 
-![Dataset](assets/dataset.png)
+[**Google Drive**](https://drive.google.com/file/d/1LiNgkRZ-Kmv5rKI3BOaHVCudhrMtE5hx/view?usp=sharing)
 
 STANCE (Style Transfer, Fine-Grained Adjustment, and Body Part Replacement) is a comprehensive motion editing benchmark that encompasses three common types of motion editing tasks.
 
